@@ -4,15 +4,15 @@ import { getNextStaticProps } from "@faustjs/next";
 import Layout from "../../components/Layout";
 import Link from "next/link";
 import styles from "scss/pages/songs.module.scss";
-
+import { SongIdType } from "client";
 export default function Song() {
   const { useQuery } = client;
   const { query = {} } = useRouter();
   const { songSlug } = query;
 
   const song = useQuery().song({
-    id: songSlug,
-    idType: "SLUG",
+    id: songSlug as string,
+    idType: SongIdType.SLUG,
   });
 
   return (

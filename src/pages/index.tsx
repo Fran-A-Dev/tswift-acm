@@ -1,6 +1,6 @@
 import { client } from "client";
-import AlbumCard from "components/AlbumCard";
-import Layout from "components/Layout";
+import AlbumCard from "../components/AlbumCard";
+import Layout from "../components/Layout";
 import styles from "scss/pages/albums.module.scss";
 
 export default function Home() {

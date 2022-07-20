@@ -4,6 +4,7 @@ import { getNextStaticProps } from "@faustjs/next";
 import Layout from "../../components/Layout";
 import Link from "next/link";
 import styles from "scss/pages/albums.module.scss";
+import { AlbumIdType } from "client";
 
 export default function Album() {
   const { useQuery } = client;
@@ -11,8 +12,8 @@ export default function Album() {
   const { albumSlug } = query;
 
   const album = useQuery().album({
-    id: albumSlug,
-    idType: "SLUG",
+    id: albumSlug as string,
+    idType: AlbumIdType.SLUG,
   });
 
   return (
