@@ -1,7 +1,7 @@
-import type { Page, Post } from 'client';
-import { client } from 'client';
-import { PostComponent } from './posts/[postSlug]';
-import { PageComponent } from './[...pageUri]';
+import type { Page, Post } from "client";
+import { client } from "client";
+import { PostComponent } from "./posts/[postSlug]";
+import { PageComponent } from "./[...pageUri]";
 
 export default function Preview() {
   const isLoading = client.useIsLoading();
@@ -16,11 +16,11 @@ export default function Preview() {
   }
 
   switch (typeName) {
-    case 'Page': {
+    case "Page": {
       const page = node as Page;
       return <PageComponent page={page} />;
     }
-    case 'Post': {
+    case "Post": {
       const post = node as Post;
       return <PostComponent post={post} />;
     }
