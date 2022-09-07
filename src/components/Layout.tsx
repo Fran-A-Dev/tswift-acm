@@ -6,7 +6,7 @@ export default function Layout({ children }) {
       <Head>
         <title>TS Discography</title>
       </Head>
-      <div>Taylor Swift ACM/Faust Demo</div>
+      <div>Taylor Swift ACM/Faust Demo with Atlas preview env</div>
       <main>{children}</main>
     </>
   );
